@@ -45,6 +45,17 @@ namespace Oop05
             #endregion
 
 
+
+
+            #region Q3
+            INotificationService emailService = new EmailNotificationService();
+            INotificationService smsService = new SmsNotificationService();
+            INotificationService pushService = new PushNotificationService();
+
+            emailService.SendNotification("nana@example.com", "Welcome to our service!");
+            smsService.SendNotification("01012345678", "Your code is 1234");
+            pushService.SendNotification("NanaDevice123", "You have a new alert!");
+            #endregion
         }
     }
 }
